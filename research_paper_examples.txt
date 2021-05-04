@@ -1,0 +1,51 @@
+https://link.springer.com/chapter/10.1007/978-3-030-13888-2_42
+
+Possibility of Using Automation Tools for Planting of the Energy Willow Cuttings
+
+Existing machines for planting energy crops cuttings are characterized by the low productivity because of the speed restriction to hand stowing into a plant setter. Therefore, establishment of mechanisms for the cutting auto-stowing into a plant setter is a current scientific and production task. The research is set against the analysis of the known planting machine constructions that are used for setting the potted plants and forest seedlings. In this research, the methods of structural and factorial analysis with regard to the mechanisms’ arrangement were used, as well as peculiarities of the working processes occurring at each stage of the overall technological process of the cutting relocation from the reservoir to the land area were highlighted. In the issue of analysis, possible ways of different methods implementation into the technological process were singled out. This can be seen in the structural and logical scheme of the process. The promising solutions for planting automation of the energy crop cuttings were provided.
+
+
+https://www.sciencedirect.com/science/article/pii/S2212827120314797
+
+
+Maintenance of dashboards and data extraction processes consists of a large number of manual steps due to the presence of several types of data sources and multiple transformations. The usage of multiple applications further adds to the complexity. Although existing tools (like Tableau Prep, Alteryx etc) help automate manual steps for a single application (say Tableau) using a GUI, a tool which automates processes across multiple applications using a single interface was not found. To address this/This paper addresses this with a solution which automates processes across multiple applications using a single GUI, which also has a very intuitive UI. Such a tool would not only
+
+
+
+Phase 1: Each project required dealing with
+
+Select desired menu options and download file using download button on sites like TeamMoments - Used Selenium to automate all browser interactions and store data in desired folder - Selenium
+Manually download SharePoint list as Excel file - Automated download of SharePoint list as Excel file - SharePlum
+Manually perform data aggregation, cleaning and transformation in Excel - Automated data cleaning and transformation - Pandas
+Open Teradata studio and run SQL queries - Automatic execution of SQL queries within Python - Teradata
+Manually open Excel file and update links to other Excel workbboks - Automated updating of Excel links(without opening file) - win32com
+Send email notification to end users manually - Automated email notifications - win32com
+Create new folders within Windows file explorer each month, copy and move files manually - Automated folder creation and movement of files - os, shutil, time
+
+
+Besides tabadmin
+
+Phase 2: Single click execution of Python scripts
+
+Once Python scripts were written, a GUI was created to enable easy execution of the Python scripts with a single click. The GUI also aimed at facilitating easy transition of support process execution from one resource to another with minimal knowlege transfer. To achive this, we focused on 2 aspects: 
+
+The GUI would have all the pre-requisites required to execute the support activities mentioned for each of the projects (eg. required accesses, procedure to raise them etc).
+
+Built separate window for each project, with self explanatory menus. Most PyQt5 GUI generally have all widgets embedded in a single window/layout. While this makes development easier, it is less intuitive and higly cramped, especially when there too many widgets. To build separate windows, we used the QWidget class (derived from QObject and QPaintDevice classes) which is the base class for all user interface objects, and added all required sub-widgets to this. A QWidget object was created for each separate window, which would then be displayed as the Main Window using the setcentralwidget() function, when triggered by the user. This lead to far better UI and UX.
+
+Phase 3
+To build a centralized logging system, we using Python logger library. Created simple module within Python which can  
+
+
+Phase 4:
+Automated execution of Python scripts using Windows Task scheduler + batch file
+
+Phase 5 (future work):
+Data Validation
+
+
+
+
+
+
+
