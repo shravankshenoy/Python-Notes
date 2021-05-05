@@ -34,17 +34,35 @@ The GUI would have all the pre-requisites required to execute the support activi
 Built separate window for each project, with self explanatory menus. Most PyQt5 GUI generally have all widgets embedded in a single window/layout. While this makes development easier, it is less intuitive and higly cramped, especially when there too many widgets. To build separate windows, we used the QWidget class (derived from QObject and QPaintDevice classes) which is the base class for all user interface objects, and added all required sub-widgets to this. A QWidget object was created for each separate window, which would then be displayed as the Main Window using the setcentralwidget() function, when triggered by the user. This lead to far better UI and UX.
 
 Phase 3
-To build a centralized logging system, we using Python logger library. Created simple module within Python which can  
+After building the tool, we implemented a logging system to track events when your code runs so that if the code crashes we could check the logs and identify what caused it.
 
+Using logging, you can:
 
-Phase 4:
-Automated execution of Python scripts using Windows Task scheduler + batch file
+Control message level to log only required ones
+Control where to show or save the logs
+Control how to format the logs with built-in message templates
+Know which module the messages is coming from
+
+To build a centralized logging system, we used Python logger library, which would log details to a text file. 
+
+Moreover we created simple module which wpuld enable us to measure time of execution of any code - called timing.py. This module was placed within the site-packages folder so than it can be imported like any other standard Python library.This module helped us figure out which scripts took more time so that we could focus on optimizing such scripts. (Infact this process lead us to discover Dask, a library that can help scale packages like Numpy and Pandas to multi-core machines and distributed clusters)
+
+Phase 4:Automated execution of Python scripts using Windows Task scheduler + batch file
+
+While the previous reduced the manual intervention required to a few clicks, the goal of this phase was to identify projects where manual intervention could be removed completely(user would not have to open the GUI). This would require the Python script to execute automatically on the days the refresh was supposed to be executed. Since the team did not have access to a Python server, it went for an alternate approach - using Windows Task scheduler + Batch file.
+
+A batch file would enable us to run Python code using command line commands. This batch file can then be scheduled on a particular time using the Windows task scheduler.
+
 
 Phase 5 (future work):
 Data Validation
 
 
-
+Sources:
+https://www.tutorialspoint.com/pyqt/pyqt_major_classes.htm
+https://stackoverflow.com/questions/49494759/qmainwindow-vs-qwidget
+https://stackoverflow.com/questions/36654225/pyqt5-add-custom-qwidget-to-qlayout
+https://www.e-education.psu.edu/geog485/node/285
 
 
 
